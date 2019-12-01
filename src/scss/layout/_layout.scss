@@ -1,0 +1,67 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    text-rendering: optimizeLegibility;
+    @include media('>=desktop') {
+        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.empty-wrapper {
+    padding-top: 0;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    @include media('>=desktop') {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+%container-general {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $container;
+    padding-left: $side-gutters-sm;
+    padding-right: $side-gutters-sm;
+}
+
+.container {
+    @extend %container-general;
+    &--xl {
+        @extend %container-general;
+        max-width: $container-xl;
+    }
+    &--md {
+        @extend %container-general;
+        max-width: $container-md;
+    }
+    &--cms {
+        @extend %container-general;
+        max-width: $container-cms;
+    }
+    &--cms-sm {
+        @extend %container-general;
+        max-width: $container-cms-sm;
+    }
+    &--xs {
+        @extend %container-general;
+        max-width: $container-xs;
+    }
+    & &,
+    .wrapped {
+        @extend .no-gutters;
+    }
+}
+
+.no-gutters {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

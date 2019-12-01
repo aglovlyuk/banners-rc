@@ -1,0 +1,49 @@
+.not-found {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.not-found__title {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.not-found__subtitle {
+    @extend .not-found__title;
+}
+
+.not-found__title {
+    margin-bottom: 10vh;
+    @include media('<desktop') {
+        font-size: 120px;
+    }
+    @include media('>=desktop') {
+        font-size: 184px;
+    }
+    @include media('>=superscreen') {
+        font-size: 284px;
+    }
+}
+
+.not-found__subtitle {
+    @include media('<desktop') {
+        font-size: 44px;
+    }
+    @include media('>=desktop') {
+        font-size: 84px;
+    }
+    @include media('>=superscreen') {
+        font-size: 124px;
+    }
+}

@@ -1,0 +1,129 @@
+@mixin hover {
+    @include media('>=desktop-hover') {
+        &:hover {
+            @content;
+        }
+    }
+}
+@mixin hover-color($color) {
+    @include anim(color);
+
+    @include hover {
+        color: $color;
+        @include anim(color);
+    }
+}
+@mixin hover-fill($color) {
+    @include anim(fill);
+
+    @include hover {
+        fill: $color;
+        @include anim(color);
+    }
+}
+@mixin hover-bg($color) {
+    @include anim(background-color);
+
+    @include hover {
+        background-color: $color;
+        @include anim(background-color);
+    }
+}
+// vertical/horizontal align el
+// usage: @include xycenter/xcenter/ycenter;
+//
+@mixin xycenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+@mixin xcenter {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+@mixin ycenter {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin border($border-style, $border-width, $border-cr) {
+    border-style: $border-style;
+    border-width: $border-width;
+    border-color: $border-cr;
+    @content;
+}
+
+@mixin anim($param: all, $dur: $animation-speed, $type: $animation-type, $delay: 0s) {
+    transition: $param $dur $type $delay;
+}
+@mixin animation($animation-name, $animation-duration, $animation-timing-function) {
+    @media screen and (min-width: $desktop-animation) {
+        animation-name: $animation-name;
+        animation-duration: $animation-duration;
+        animation-timing-function: $animation-timing-function;
+        animation-fill-mode: forwards;
+
+        @content;
+    }
+}
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        opacity: 1;
+        @content
+    }
+    &:-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
+    &.placeholder {
+        @content
+    }
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+            eot: "?",
+            svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+            otf: "opentype",
+            ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}

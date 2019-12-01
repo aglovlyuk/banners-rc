@@ -1,0 +1,9 @@
+.badge {
+    line-height: $badge-line-height;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-weight: 600;
+    &-light {
+        color: #fff;
+    }
+}

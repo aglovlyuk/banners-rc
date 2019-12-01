@@ -1,0 +1,38 @@
+// Brand colors
+$cr-brand-primary:          #4a141d;
+$cr-brand-secondary:        #fff;
+$cr-brand-tertiary:         #212529;
+$cr-danger:                 #fa6e36;
+$cr-warning:                #ffc826;
+$cr-success:                #00bf96;
+$cr-info:                   #ff5724;
+$cr-link:                   $cr-danger;
+$cr-gray:                   #9db1c3;
+
+// background colors
+$bg-color-primary:          $cr-brand-primary;
+$bg-color-secondary:        $cr-brand-secondary;
+
+// font colors
+$font-cr-primary:           $cr-brand-secondary;
+$font-cr-secondary:         $cr-brand-primary;
+
+// link colors
+$link-cr-font:              $cr-brand-primary;
+
+// button colors
+$btn-cr-font:               #fff;
+
+// border colors
+$border-cr:                 rgba(32, 38, 40, 0.1);
+$form-border-color:         rgba(#fff, .2);
+$form-border-focus:         #fff;
+$form-txt-color:            $font-cr-primary;
+
+// Warnings
+$cr-error:                  $cr-danger;
+$warning-cr-success:        $cr-warning;
+
+// Body
+$base-text-color:           $font-cr-primary !default;
+$base-background-color:     #fff !default;

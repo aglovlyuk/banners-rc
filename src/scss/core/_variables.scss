@@ -1,0 +1,78 @@
+$animation-speed:           .27s !default;
+$animation-speed-slow2x:    $animation-speed * 2;
+$animation-speed-slow3x:    $animation-speed * 3;
+$animation-speed-slow4x:    $animation-speed * 4;
+$animation-type:            cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+
+// Forms
+$form-border:               0;
+$form-cr-val:               #231f20;
+$form-cr-placeholder:       $form-cr-val;
+$form-hor-padding-sm:       15px;
+$form-hor-padding:          7px;
+
+$header-height-sm:          80px;
+$header-height:             100px;
+
+// Grids
+$aside:                     238px;
+
+// Media Queries
+$container-xl:              1920px;
+$container-md:              1490px;
+$container:                 1210px;
+$container-cms:             970px;
+$container-cms-sm:          730px;
+$container-xs:              370px;
+$base-min-width:            320px;
+$side-gutters:              20px;
+$side-gutters-sm:           15px;
+$side-gutters-lg:           $side-gutters-sm * 2;
+$side-gutters-xl:           $side-gutters * 2;
+
+$layout-gutter-r:           1.81vw;
+$layout-gutter-l:           7.41vw;
+
+$desktop-hover:             1025px;
+$desktop-animation:         1025px;
+
+$screen-xs:                 530px !default;
+$screen-xs-min:             $screen-xs !default;
+$screen-phone:              $screen-xs-min !default;
+
+$screen-ph:                 576px !default;
+
+$screen-sm:                 768px !default;
+$screen-sm-min:             $screen-sm !default;
+$screen-tablet:             $screen-sm-min !default;
+
+$screen-md:                 992px !default;
+$screen-md-min:             $screen-md !default;
+$screen-desktop:            $screen-md-min !default;
+
+$screen-lg:                 1200px !default;
+$screen-lg-min:             $screen-lg !default;
+$screen-lg-desktop:         $screen-lg-min !default;
+
+$screen-xl:                 1440px !default;
+$screen-xxl:                1800px;
+$screen-xxxl:               2100px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:             ($screen-sm-min - 1) !default;
+$screen-sm-max:             ($screen-md-min - 1) !default;
+$screen-md-max:             ($screen-lg-min - 1) !default;
+
+// media queries breakpoints
+$breakpoints: (
+    'phone': $screen-xs,
+    'phablet': $screen-ph,
+    'tablet': $screen-sm,
+    'desktop': $screen-md,
+    'widescreen': $screen-lg,
+    'largescreen': $screen-xl,
+    'superscreen' : $screen-xxl,
+    'megascreen' : $screen-xxxl,
+    'desktop-anim': $desktop-animation,
+    'desktop-hover': $desktop-hover
+);

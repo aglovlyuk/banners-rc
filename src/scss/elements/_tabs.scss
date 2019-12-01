@@ -1,0 +1,40 @@
+.tabs {
+    @extend %listreset;
+    display: flex;
+}
+
+.tabs__item {
+    position: relative;
+    &:not(:first-child) {
+        margin-left: 20px;
+        @include media('>=desktop') {
+            margin-left: 39px;
+        }
+    }
+    &.active {
+        font-weight: 700;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 4px;
+            top: 100%;
+            left: -3px;
+            right: -3px;
+            background-color: $cr-brand-primary;
+            border-radius: 4px;
+        }
+        .tabs__link {
+            color: $cr-brand-secondary;
+        }
+    }
+}
+
+.tabs__link {
+    color: rgba($cr-brand-secondary, .5);
+    &:hover {
+        text-decoration: none;
+    }
+    @include hover {
+        color: $cr-brand-secondary;
+    }
+}

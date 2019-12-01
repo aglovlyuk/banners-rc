@@ -1,0 +1,21 @@
+@include font-face('Gotham', '../fonts/Source-Sans-Pro', 400, normal, woff2 woff);
+@include font-face('Gotham', '../fonts/Cormorant-Garamond-Bold', 700, normal, woff2 woff);
+
+// Fonts
+$font-primary:              "Source Sans Pro", Arial, sans-serif;
+$font-secondary:            "Cormorant Garamond", Times, serif;
+
+// Body
+$base-font-size:            15px !default;
+$line-height-base:          2 !default; //30px
+
+// link colors
+$link-cr-font:              $cr-brand-primary;
+
+// headings
+$heading-weight:            500;
+$heading-cr:                $cr-brand-tertiary;
+$heading-letter-spacing:    0;
+
+// Additional
+$accent-color:              $cr-brand-primary;

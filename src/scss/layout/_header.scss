@@ -1,0 +1,47 @@
+.header {
+    position: relative;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-color: rgba(#4c4c4c, .8);
+    width: 224px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    line-height: 0;
+    @include media('<tablet') {
+        @include xcenter;
+    }
+    @include media('>=tablet') {
+        left: 10vw;
+        width: 280px;
+        height: 41px;
+    }
+    @include media('>=desktop') {
+        width: 350px;
+        height: 51px;
+    }
+}
+
+.logo__img {
+    width: 192px;
+    height: 22px;
+    @include media('>=tablet') {
+        width: 240px;
+        height: 27px;
+    }
+    @include media('>=desktop') {
+        width: 300px;
+        height: 34px;
+    }
+}

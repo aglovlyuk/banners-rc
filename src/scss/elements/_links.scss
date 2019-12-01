@@ -1,0 +1,48 @@
+/* LINKS */
+
+[class*="link-"] {
+    @include anim;
+    @extend .btn-transparency;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    [class*="icon"] {
+        margin-right: 10px;
+    }
+}
+
+.link-primary {
+    text-decoration: none;
+    position: relative;
+    color: $cr-brand-primary;
+    &:hover {
+        color: $cr-brand-secondary;
+    }
+    .ajax-loader {
+        @include ycenter;
+        left: 105%;
+    }
+}
+
+.link-more {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    .icon-arrow-r {
+        @include anim;
+        font-size: 9px;
+        margin-left: 7px;
+    }
+    @include hover {
+        .icon-arrow-r {
+            transform: translateX(3px);
+        }
+    }
+}
+
+.link-default {
+    color: #9eadbc;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}

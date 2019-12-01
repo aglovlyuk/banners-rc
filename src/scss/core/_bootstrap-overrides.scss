@@ -1,0 +1,49 @@
+// Bootstrap overrides
+//
+// Copy variables from `node_modules/scss/bootstrap/_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Brand colors
+$primary:                   $cr-brand-primary;
+$secondary:                 $cr-brand-secondary;
+$success:                   $cr-success;
+$info:                      $cr-info;
+$warning:                   $cr-warning;
+$danger:                    $cr-danger;
+$light:                     $cr-gray;
+
+$spacer:                    1rem !default;
+$body-bg:                   $bg-color-primary;
+
+$headings-font-weight:      $heading-weight;
+$headings-color:            $heading-cr;
+$headings-margin-bottom:    $spacer * .625 !default;
+
+$card-border-width:         0;
+$card-cap-bg:               $cr-brand-primary;
+
+// Badges
+
+$badge-color:                   #f00 !default;
+//** Linked badge text color on hover
+$badge-link-hover-color:        #fff !default;
+$badge-bg:                      $cr-gray !default;
+
+//** Badge text color in active nav link
+$badge-active-color:            $cr-link;
+//** Badge background color in active nav link
+$badge-active-bg:               #fff !default;
+
+$badge-font-weight:             bold !default;
+$badge-line-height:             22px;
+$badge-border-radius:           15px !default;
+
+$alert-padding-y:               12px !default;
+
+$dropdown-bg:                   #263237;
+$dropdown-color:                #fff;
+$dropdown-border-width:         0;
+$dropdown-link-color:           #fff;
+
+$modal-backdrop-bg:             #3f4e5c;
+$modal-backdrop-opacity:        .9;

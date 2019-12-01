@@ -1,0 +1,25 @@
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: $cr-brand-secondary;
+    height: 100vh;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.loader__line {
+    @include xcenter;
+    @include anim($dur: 1s, $param: transform);
+    width: 15px;
+    height: 0;
+    max-height: 100vh;
+    background-color: $cr-brand-primary;
+    @include media('>=desktop') {
+        width: 25px;
+    }
+    .is-load-end & {
+        transform: translate(-50%, 100%);
+    }
+}

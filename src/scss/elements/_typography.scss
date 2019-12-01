@@ -1,0 +1,51 @@
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &::selection {
+        color: #fff;
+        opacity: 1;
+        background-color: rgba($cr-brand-primary, .7);
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $base-text-color;
+    font-size: $base-font-size;
+    line-height: $line-height-base;
+}
+
+img {
+    max-width: 100%;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    color: currentColor;
+}
+
+img,
+video,
+iframe {
+    vertical-align: top;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    @include anim;
+    color: $cr-link;
+    text-decoration: underline;
+    @include hover {
+        text-decoration: none;
+        color: $cr-link;
+    }
+}
+
+strong, b {
+    cursor: default;
+    font-weight: 700;
+}

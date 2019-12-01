@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.pagination-list {
+    @extend %listreset;
+    display: flex !important;
+    align-items: center;
+    margin-right: 8px;
+    li {
+        margin: 0 6px;
+    }
+    button,
+    a {
+        background-color: transparent;
+        padding: 0;
+        width: 9px;
+        height: 9px;
+        border: 2px solid #c7d4e7;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    .slick-active,
+    .is-active {
+        button,
+        a {
+            background-color: #c7d4e7;
+        }
+    }
+}

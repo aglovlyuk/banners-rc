@@ -1,0 +1,52 @@
+{
+  "name": "gulpfront",
+  "version": "1.0.0",
+  "description": "The template for quick start of development with Gulp, Sass and ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aglovlyuk@gmail.com",
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^6.7.2",
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-clean-css": "2.4.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-path": "^3.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-posthtml": "^2.0.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-svg-symbols": "^2.0.0",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
+    "gulp-zip": "^3.2.0",
+    "imagemin-pngquant": "^6.0.0",
+    "jquery": "3.*",
+    "normalize.css": "^5.0.0",
+    "postcss-sorting": "^1.6.1",
+    "posthtml-attrs-sorter": "^0.1.3",
+    "run-sequence": "^1.2.2",
+    "stylefmt": "^4.2.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.2.0"
+  }
+}

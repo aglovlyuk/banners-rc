@@ -1,0 +1,18 @@
+.icon-sprite {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+}
+
+.icon {
+    @include anim;
+    transform: translateZ(0);
+    display: inline-block;
+    vertical-align: middle;
+    pointer-events: none;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}

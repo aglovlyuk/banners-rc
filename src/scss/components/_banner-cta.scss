@@ -1,0 +1,39 @@
+.banner__cta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 66.5%;
+}
+
+.banner__txt-ttl--alt {
+    font-size: 46px;
+    left: 1.25em;
+
+    opacity: 0;
+    animation: text-appearance $animation-speed-slow4x $animation-speed * 17 forwards;
+    animation-timing-function: $animation-type;
+}
+
+.banner__txt--alt {
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+
+    opacity: 0;
+    animation: text-appearance $animation-speed-slow4x $animation-speed * 17 forwards;
+    animation-timing-function: $animation-type;
+}
+
+.icon-location {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    font-size: 25px;
+    margin-right: 11px;
+}
