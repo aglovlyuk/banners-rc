@@ -3,25 +3,28 @@
 
 .banner__cta {
     position: absolute;
-    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 100% - $logo-block-width;
-    padding: 15px;
+    text-align: center;
+    height: 100% - $logo-block-width;
+    padding: 15px 10px 15px;
 }
 
 .banner__cta-ttl {
-    font-size: 43px;
-    line-height: 1;
-    margin-right: 48px;
+    font-size: $banner-cta-ttl-fz;
+    line-height: $banner-cta-ttl-lh;
+    margin: auto;
     opacity: 0;
 
     .anim-start & {
         animation:
             appearance $anim-speed-slow4x $anim-speed * 17 forwards,
-            ppearance $anim-speed-slow3x $anim-speed * 27 forwards reverse;
+            appearance $anim-speed-slow3x $anim-speed * 27 forwards reverse;
         animation-timing-function: $anim-type;
     }
 }
@@ -29,14 +32,15 @@
 .banner__cta-txt {
     display: flex;
     align-items: center;
-    font-size: 28px;
-    margin-bottom: 11px;
+    font-size: $banner-cta-txt-fz;
+    margin-top: 40px;
+    margin-bottom: 30px;
     opacity: 0;
 
     .anim-start & {
         animation:
             appearance $anim-speed-slow4x $anim-speed * 19 forwards,
-            ppearance $anim-speed-slow2x $anim-speed * 28 forwards reverse;
+            appearance $anim-speed-slow2x $anim-speed * 28 forwards reverse;
         animation-timing-function: $anim-type;
     }
 }
@@ -47,14 +51,4 @@
     height: 1em;
     display: inline-block;
     margin-right: 7px;
-}
-
-.banner__cta-seller {
-    opacity: 0;
-    .anim-start & {
-        animation:
-            appearance $anim-speed-slow4x $anim-speed * 19 forwards,
-            appearance $anim-speed-slow2x $anim-speed * 28 forwards reverse;
-        animation-timing-function: $anim-type;
-    }
 }

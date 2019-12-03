@@ -22,8 +22,8 @@
 
     .anim-start & {
         animation:
-            text-appearance $anim-speed-slow4x $anim-speed * 17 forwards,
-            text-disappearance $anim-speed-slow3x $anim-speed * 27 forwards;
+            appearance $anim-speed-slow4x $anim-speed * 17 forwards,
+            appearance $anim-speed-slow3x $anim-speed * 27 forwards reverse;
         animation-timing-function: $anim-type;
     }
 }
@@ -37,8 +37,8 @@
 
     .anim-start & {
         animation:
-            text-appearance $anim-speed-slow4x $anim-speed * 19 forwards,
-            text-disappearance $anim-speed-slow2x $anim-speed * 28 forwards;
+            appearance $anim-speed-slow4x $anim-speed * 19 forwards,
+            appearance $anim-speed-slow2x $anim-speed * 28 forwards reverse;
         animation-timing-function: $anim-type;
     }
 }
@@ -55,8 +55,8 @@
     opacity: 0;
     .anim-start & {
         animation:
-            text-appearance $anim-speed-slow4x $anim-speed * 19 forwards,
-            text-disappearance $anim-speed-slow2x $anim-speed * 28 forwards;
+            appearance $anim-speed-slow4x $anim-speed * 19 forwards,
+            appearance $anim-speed-slow2x $anim-speed * 28 forwards reverse;
         animation-timing-function: $anim-type;
     }
 }

@@ -30,8 +30,8 @@
 
     .anim-start & {
         animation:
-            text-appearance $anim-speed-slow4x $anim-speed * 17 forwards,
-            text-disappearance $anim-speed-slow3x $anim-speed * 27 forwards;
+            appearance $anim-speed-slow4x $anim-speed * 17 forwards,
+            appearance $anim-speed-slow3x $anim-speed * 27 forwards reverse;
         animation-timing-function: $anim-type;
     }
 }
@@ -43,7 +43,7 @@
     margin-bottom: 4px;
     opacity: 0;
 
-    animation: text-appearance $anim-speed-slow3x $anim-speed * 4 forwards;
+    animation: appearance $anim-speed-slow3x $anim-speed * 4 forwards;
     animation-timing-function: $anim-type;
 }
 

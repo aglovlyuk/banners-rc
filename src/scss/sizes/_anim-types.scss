@@ -1,4 +1,4 @@
-@keyframes block-appearance {
+@keyframes appearance {
     0% {
         opacity: 0;
     }
@@ -8,13 +8,15 @@
     }
 }
 
-@keyframes block-disappearance {
+@keyframes block-full-width {
     0% {
-        opacity: 1;
+        flex-basis: $logo-block-width;
+        max-width: $logo-block-width;
     }
 
     100% {
-        opacity: 0;
+        flex-basis: $banner-size-w;
+        max-width: $banner-size-w;
     }
 }
 
@@ -27,26 +29,6 @@
     100% {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes text-appearance {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes text-disappearance {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
     }
 }
 

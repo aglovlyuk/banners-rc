@@ -5,6 +5,7 @@
     @include size($banner-size-w, $banner-size-h);
     background-color: $cr-brand-primary;
     display: flex;
+    justify-content: flex-end;
     position: relative;
     overflow: hidden;
 
@@ -34,10 +35,15 @@
     justify-content: center;
     flex: 0 0 $logo-block-width;
     max-width: $logo-block-width;
+    height: 215px;
+    order: 1;
 
-    transform: scale(.5);
-    animation: object-scale $anim-speed * 8 0s forwards;
-    animation-timing-function: $anim-type;
+    .anim-start & {
+        animation:
+            block-full-width $anim-speed-slow2x $anim-speed * 13 forwards,
+            block-full-width $anim-speed-slow2x $anim-speed * 28 forwards reverse;
+        animation-timing-function: $anim-type;
+    }
 }
 
 .banner__logo-img {
@@ -45,27 +51,34 @@
 }
 
 .banner__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     max-width: $img-block-width;
     flex: 0 0 $img-block-width;
-    opacity: 1;
 
     .anim-start & {
         animation:
-            appearance $anim-speed-slow2x $anim-speed * 13 forwards reverse,
-            appearance $anim-speed-slow4x $total-anim-time - $anim-speed * 3 forwards;
+            appearance $anim-speed-slow2x $anim-speed * 13 reverse,
+            appearance $anim-speed-slow4x $total-anim-time - $anim-speed * 3;
+        animation-fill-mode: forwards;
         animation-timing-function: ease-in;
     }
 }
 
 .banner__txt-holder {
-    flex-grow: 1;
+    position: absolute;
+    bottom: 36px;
+    right: 0;
+    width: $logo-block-width;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: $cr-brand-secondary;
-    padding: 27px 10px 10px;
+    padding: 10px;
     opacity: 1;
 
     .anim-start & {
@@ -77,9 +90,9 @@
 .banner__txt-ttl {
     font-family: $font-secondary;
     text-transform: uppercase;
-    font-size: 37px;
-    line-height: 1.2;
-    margin-bottom: 8px;
+    font-size: 38px;
+    line-height: 1.26;
+    margin-bottom: .9em;
     opacity: 0;
 
     .anim-start & {
@@ -90,12 +103,9 @@
 
 .banner-seller {
     font-weight: 300;
-    font-size: 17px;
-    opacity: 0;
+    font-size: 23px;
+    /*opacity: 0;
     transform: translateY(50%);
-
-    .anim-start & {
-        animation: text-appearance-move $anim-speed-slow3x $anim-speed * 4 forwards;
-        animation-timing-function: $anim-type;
-    }
+    animation: text-appearance-move $anim-speed-slow3x $anim-speed * 4 forwards;
+    animation-timing-function: $anim-type;*/
 }

@@ -51,8 +51,8 @@
 
     .anim-start & {
         animation:
-            block-disappearance $anim-speed-slow2x $anim-speed * 13 forwards,
-            block-appearance $anim-speed-slow4x $total-anim-time - $anim-speed * 3 forwards;
+            appearance $anim-speed-slow2x $anim-speed * 13 forwards reverse,
+            appearance $anim-speed-slow4x $total-anim-time - $anim-speed * 3 forwards;
         animation-timing-function: ease-in;
     }
 }
@@ -70,7 +70,7 @@
     opacity: 1;
 
     .anim-start & {
-        animation: text-disappearance $anim-speed-slow2x $anim-speed * 13 forwards;
+        animation: appearance $anim-speed-slow2x $anim-speed * 13 forwards reverse;
         animation-timing-function: $anim-type;
     }
 }
@@ -84,7 +84,7 @@
     opacity: 0;
 
     .anim-start & {
-        animation: text-appearance $anim-speed-slow3x $anim-speed * 2 forwards;
+        animation: appearance $anim-speed-slow3x $anim-speed * 2 forwards;
         animation-timing-function: $anim-type;
     }
 }
