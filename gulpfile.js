@@ -38,7 +38,7 @@ var options = {
         fonts: distFolder + 'fonts/'
     },
     src: { // Source paths
-        html: srcFolder + 'html/views/*.html',
+        html: srcFolder + 'html/*.html',
         js: srcFolder + 'js/**/*.js',
         style: srcFolder + 'scss/**/*.scss',
         img: srcFolder + 'img/*.{jpg,png,svg}',

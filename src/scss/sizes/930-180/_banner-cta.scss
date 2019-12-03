@@ -1,0 +1,62 @@
+@import "variables-local";
+@import "../anim-types";
+
+.banner__cta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100% - $logo-block-width;
+    padding: 15px;
+    padding-right: 5%;
+}
+
+.banner__cta-ttl {
+    font-size: 43px;
+    line-height: 1;
+    margin-right: 6%;
+    opacity: 0;
+    text-align: center;
+
+    .anim-start & {
+        animation:
+            text-appearance $anim-speed-slow4x $anim-speed * 17 forwards,
+            text-disappearance $anim-speed-slow3x $anim-speed * 27 forwards;
+        animation-timing-function: $anim-type;
+    }
+}
+
+.banner__cta-txt {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    margin-bottom: 11px;
+    opacity: 0;
+
+    .anim-start & {
+        animation:
+            text-appearance $anim-speed-slow4x $anim-speed * 19 forwards,
+            text-disappearance $anim-speed-slow2x $anim-speed * 28 forwards;
+        animation-timing-function: $anim-type;
+    }
+}
+
+.icon-location {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.banner__cta-seller {
+    opacity: 0;
+    .anim-start & {
+        animation:
+            text-appearance $anim-speed-slow4x $anim-speed * 19 forwards,
+            text-disappearance $anim-speed-slow2x $anim-speed * 28 forwards;
+        animation-timing-function: $anim-type;
+    }
+}

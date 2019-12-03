@@ -1,0 +1,11 @@
+$banner-size-w: 728px;
+$banner-size-h: 90px;
+
+$logo-size-w: 92px;
+$logo-size-h: 65px;
+
+$logo-block-width: 23.21%;
+$img-block-width: 23.08%;
+$txt-block-width: 100% - $img-block-width - $logo-block-width;
+
+$total-anim-time: $anim-speed * 34; //9.18s

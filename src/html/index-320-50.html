@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="css/main-320-50.css" />
+</head>
+<body>
+
+<div class="banner js-animated">
+    <div class="banner__logo">
+        <img class="banner__logo-img" src="img/logo-96-28.svg" alt="">
+    </div>
+
+    <div class="banner__txt-holder">
+        <span class="banner__txt-ttl">Много места для семьи</span>
+    </div>
+
+    <div class="banner__cta">
+        <span class="banner__cta-ttl">Готовые квартиры от 115 м<sup>2</sup></span>
+    </div>
+</div>
+
+<script>
+    function whichTransitionEvent(){
+        var t,
+            el = document.createElement("fakeelement");
+
+        var transitions = {
+            "transition"      : "transitionend",
+            "OTransition"     : "oTransitionEnd",
+            "MozTransition"   : "transitionend",
+            "WebkitTransition": "webkitTransitionEnd"
+        };
+
+        for (t in transitions){
+            if (el.style[t] !== undefined){
+                return transitions[t];
+            }
+        }
+    }
+
+    const animated = document.querySelector('.js-animated');
+    const body = document.body;
+    let transitionEvent = whichTransitionEvent();
+    let timeOut = 1;
+
+    setTimeout(function(){
+        body.classList.add('anim-start');
+    }, 1);
+
+    animated.addEventListener(transitionEvent, function () {
+        body.classList.remove("anim-start");
+
+        // re-call animation
+        setTimeout(function () {
+            body.classList.add('anim-start');
+        }, timeOut);
+    }, false);
+</script>
+
+</body>
+</html>

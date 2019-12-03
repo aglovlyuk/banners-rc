@@ -28,6 +28,4 @@ bower_components/
 .all\.css$
 
 
-/css/
-/images/
-/js/
+/dist/

@@ -1,0 +1,103 @@
+@import "variables-local";
+@import "../anim-types";
+
+.banner {
+    background-color: $cr-brand-primary;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: $banner-size-w;
+    height: $banner-size-h;
+
+    .anim-start & {
+        transform: translateX(0);
+        transition: transform 0s $total-anim-time;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 4px solid $cr-brand-secondary;
+        pointer-events: none;
+        z-index: 2;
+    }
+}
+
+.banner__logo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 17.04%;
+    max-width: 17.04%;
+
+    transform: scale(.5);
+    animation: object-scale $anim-speed * 8 0s forwards;
+    animation-timing-function: $anim-type;
+}
+
+.banner__logo-img {
+    max-width: 118px;
+    max-height: 83px;
+}
+
+.banner__img {
+    max-width: 17.755%;
+    flex: 0 0 17.755%;
+    opacity: 1;
+
+    .anim-start & {
+        animation:
+            block-disappearance $anim-speed-slow2x $anim-speed * 13 forwards,
+            block-appearance $anim-speed-slow4x $total-anim-time - $anim-speed * 3 forwards;
+        animation-timing-function: ease-in;
+    }
+}
+
+.banner__txt-holder {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $cr-brand-secondary;
+    padding: 27px 10px 10px;
+    opacity: 1;
+
+    .anim-start & {
+        animation: text-disappearance $anim-speed-slow2x $anim-speed * 13 forwards;
+        animation-timing-function: $anim-type;
+    }
+}
+
+.banner__txt-ttl {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 1.26;
+    margin-bottom: 8px;
+    opacity: 0;
+
+    .anim-start & {
+        animation: text-appearance $anim-speed-slow3x $anim-speed * 2 forwards;
+        animation-timing-function: $anim-type;
+    }
+}
+
+.banner-seller {
+    font-weight: 300;
+    font-size: 17px;
+    opacity: 0;
+    transform: translateY(50%);
+
+    .anim-start & {
+        animation: text-appearance-move $anim-speed-slow3x $anim-speed * 4 forwards;
+        animation-timing-function: $anim-type;
+    }
+}

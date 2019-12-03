@@ -65,7 +65,7 @@
     @content;
 }
 
-@mixin anim($param: all, $dur: $animation-speed, $type: $animation-type, $delay: 0s) {
+@mixin anim($param: all, $dur: $anim-speed, $type: $anim-type, $delay: 0s) {
     transition: $param $dur $type $delay;
 }
 @mixin animation($animation-name, $animation-duration, $animation-timing-function) {
