@@ -2,12 +2,11 @@
 @import "../anim-types";
 
 .banner {
+    @include size($banner-size-w, $banner-size-h);
     background-color: $cr-brand-primary;
     display: flex;
     position: relative;
     overflow: hidden;
-    width: $banner-size-w;
-    height: $banner-size-h;
 
     .anim-start & {
         transform: translateX(0);
@@ -41,9 +40,13 @@
     animation-timing-function: $anim-type;
 }
 
+.banner__logo-img {
+    @include size($logo-size-w, $logo-size-h);
+}
+
 .banner__img {
-    max-width: 30.62%;
-    flex: 0 0 30.62%;
+    max-width: $img-block-width;
+    flex: 0 0 $img-block-width;
     opacity: 1;
 
     .anim-start & {

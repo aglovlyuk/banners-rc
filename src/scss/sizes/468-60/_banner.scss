@@ -58,7 +58,8 @@
 }
 
 .banner__txt-holder {
-    flex-grow: 1;
+    flex: 0 0 36.32%;
+    max-width: 36.32%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,9 +78,9 @@
 .banner__txt-ttl {
     font-family: $font-secondary;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: $banner-txt-ttl-fz;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: $banner-txt-ttl-lh;
     opacity: 0;
 
     .anim-start & {
@@ -89,13 +90,13 @@
 }
 
 .banner-seller {
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: $banner-seller-fz;
+    line-height: 1;
+    white-space: nowrap;
     opacity: 0;
     transform: translateY(50%);
 
-    .anim-start & {
-        animation: text-appearance-move $anim-speed-slow3x $anim-speed * 4 forwards;
-        animation-timing-function: $anim-type;
-    }
+    animation: text-appearance-move $anim-speed-slow3x $anim-speed * 4 forwards;
+    animation-timing-function: $anim-type;
 }
