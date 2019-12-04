@@ -1,0 +1,22 @@
+$banner-size-w: 480px;
+$banner-size-h: 320px;
+
+$logo-size-w: 198px;
+$logo-size-h: 138px;
+
+$logo-block-width: 58.125%;
+$img-block-width: 100% - $logo-block-width;
+$txt-block-width: $logo-block-width;
+
+$total-anim-time: $anim-speed * 34; //9.18s
+
+// Typography
+$banner-txt-ttl-fz: 30px;
+$banner-txt-ttl-lh: 1.2;
+
+$banner-cta-ttl-fz: 33px;
+$banner-cta-ttl-lh: 1;
+
+$banner-cta-txt-fz: 24px;
+
+$banner-seller-fz: 19px;

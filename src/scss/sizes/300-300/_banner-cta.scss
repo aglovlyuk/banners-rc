@@ -1,0 +1,55 @@
+@import "variables-local";
+@import "../anim-types";
+
+.banner__cta {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 53.33%;
+    padding: 10px 15px 16px;
+}
+
+.banner__cta-ttl {
+    font-size: $banner-cta-ttl-fz;
+    line-height: $banner-cta-ttl-lh;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+
+    .anim-start & {
+        animation:
+            appearance $anim-speed-slow4x $anim-speed * 17 forwards,
+            appearance $anim-speed-slow3x $anim-speed * 27 forwards reverse;
+        animation-timing-function: $anim-type;
+    }
+}
+
+.banner__cta-txt {
+    display: flex;
+    align-items: center;
+    font-size: $banner-cta-txt-fz;
+    line-height: 1;
+    margin-right: auto;
+    opacity: 0;
+
+    .anim-start & {
+        animation:
+            appearance $anim-speed-slow4x $anim-speed * 19 forwards,
+            appearance $anim-speed-slow2x $anim-speed * 28 forwards reverse;
+        animation-timing-function: $anim-type;
+    }
+}
+
+.icon-location {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 7px;
+}

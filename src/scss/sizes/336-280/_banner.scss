@@ -35,7 +35,7 @@
     justify-content: center;
     flex: 0 0 $logo-block-width;
     max-width: $logo-block-width;
-    height: 215px;
+    height: 148px;
     order: 1;
 
     .anim-start & {
@@ -92,7 +92,7 @@
     text-transform: uppercase;
     font-size: $banner-txt-ttl-fz;
     line-height: $banner-txt-ttl-lh;
-    margin-bottom: .9em;
+    margin-bottom: 5px;
     opacity: 0;
 
     .anim-start & {

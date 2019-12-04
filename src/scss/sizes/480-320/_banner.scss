@@ -35,7 +35,7 @@
     justify-content: center;
     flex: 0 0 $logo-block-width;
     max-width: $logo-block-width;
-    height: 215px;
+    height: 180px;
     order: 1;
 
     .anim-start & {
@@ -71,7 +71,7 @@
     position: absolute;
     bottom: 36px;
     right: 0;
-    width: $logo-block-width;
+    width: $txt-block-width;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -8,8 +8,9 @@ var browserSync = require("browser-sync");
 var cleanCSS = require('gulp-clean-css');
 var cheerio = require('gulp-cheerio');
 var del = require('del');
+var htmlmin = require('gulp-htmlmin');
+var minifyInline = require('gulp-minify-inline');
 var imagemin = require('gulp-imagemin');
-var imageminPngquant = require('imagemin-pngquant');
 var path = require('path');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
@@ -225,11 +226,11 @@ gulp.task('style:min', function () {
     return gulp.src(options.src.style)
         .pipe(sass().on('error', sass.logError))
         .pipe($.combineMq({beautify: true}))
-        .pipe(cleanCSS({debug: true}, function (details) {
+        .pipe(cleanCSS({debug: false}, function (details) {
             console.log(details.name + ': ' + details.stats.originalSize);
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
-        .pipe(gulp.dest('css/'));
+        .pipe(gulp.dest(options.dist.css))
 });
 
 gulp.task('html:build', function () {
@@ -239,6 +240,15 @@ gulp.task('html:build', function () {
         //.pipe($.prettify(options.htmlPrettify))
         .pipe(gulp.dest(options.dist.html))
         .pipe(reload({stream: true}));
+});
+
+gulp.task('html:min', () => {
+    return gulp.src([options.src.html, '!src/includes/*.*'])
+        .pipe(rigger())
+        .pipe($.posthtml(options.posthtml.plugins, options.posthtml.options))
+        .pipe(minifyInline())
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest(options.dist.html));
 });
 
 gulp.task('cleanup', function (cb) {
@@ -328,10 +338,10 @@ gulp.task('build', function (cb) {
     );
 });
 
-gulp.task('production', function (cb) {
+gulp.task('prod', function (cb) {
     return runSequence(
         'cleanup',
-        //'html:min',
+        'html:min',
         //'js:min',
         'style:min',
         cb
